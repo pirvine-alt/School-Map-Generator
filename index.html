@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYC High School Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+    <!--
+    ================================================================================================
+    ACTION REQUIRED: GOOGLE MAPS API KEY
+    ================================================================================================
+    The map will not load without a valid Google Maps API key.
+    You must replace "YOUR_GOOGLE_MAPS_API_KEY" below with your own key.
+
+    To get a key:
+    1. Go to the Google Cloud Console: https://console.cloud.google.com/google/maps-apis/
+    2. Create a project and enable the "Maps JavaScript API".
+    3. Create an API key and restrict it for security.
+    ================================================================================================
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ2CKRMbhs1SMznMH1ID218WcUJ_OtyDw"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

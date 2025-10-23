@@ -1,0 +1,5 @@
+{
+  "name": "NYC High School Map",
+  "description": "A web application to display high schools from a specific NYC region on a Google Map. Data is sourced from a Google Sheet, and school locations are color-coded based on their status.",
+  "requestFramePermissions": []
+}
