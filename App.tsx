@@ -162,11 +162,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen font-sans">
+    <div className="flex flex-col h-screen min-h-screen font-sans">
       <header className="bg-white shadow-md z-20">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-between items-center gap-4">
-            <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-gray-900">
+          <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-4">
+            <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-gray-900 text-center sm:text-left">
               NYC High Schools Status Map
             </h1>
             {!isLoading && !error && (
@@ -211,7 +211,7 @@ const App: React.FC = () => {
             )}
           </div>
           {lastUpdated && !error && (
-            <p className="text-xs text-gray-500 mt-2 text-right w-full">
+            <p className="text-xs text-gray-500 mt-2 text-center sm:text-right w-full">
                 Last updated: {lastUpdated.toLocaleString()}
             </p>
           )}

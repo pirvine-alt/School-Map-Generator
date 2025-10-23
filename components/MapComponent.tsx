@@ -9,20 +9,20 @@ interface MapComponentProps {
 }
 
 const MapLegend: React.FC = () => (
-  <div className="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg border border-gray-200 z-10">
-    <h3 className="text-lg font-semibold mb-2 text-gray-800">Legend</h3>
+  <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 bg-white/90 backdrop-blur-sm p-2 sm:p-4 rounded-lg shadow-lg border border-gray-200 z-10">
+    <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-800">Legend</h3>
     <ul className="space-y-2">
       <li className="flex items-center">
-        <img src={MARKER_ICONS[SchoolStatus.Defined]} alt="Defined" className="w-5 h-5 mr-2" />
-        <span className="text-gray-700">Defined</span>
+        <img src={MARKER_ICONS[SchoolStatus.Defined]} alt="Defined" className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+        <span className="text-sm text-gray-700">Defined</span>
       </li>
       <li className="flex items-center">
-        <img src={MARKER_ICONS[SchoolStatus.Pending]} alt="Pending" className="w-5 h-5 mr-2" />
-        <span className="text-gray-700">Pending</span>
+        <img src={MARKER_ICONS[SchoolStatus.Pending]} alt="Pending" className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+        <span className="text-sm text-gray-700">Pending</span>
       </li>
       <li className="flex items-center">
-        <img src={MARKER_ICONS[SchoolStatus.NoService]} alt="No Service" className="w-5 h-5 mr-2" />
-        <span className="text-gray-700">No Service</span>
+        <img src={MARKER_ICONS[SchoolStatus.NoService]} alt="No Service" className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+        <span className="text-sm text-gray-700">No Service</span>
       </li>
     </ul>
   </div>
@@ -91,7 +91,7 @@ export const MapComponent: React.FC<MapComponentProps> = ({ schools, selectedSch
         const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${school.latitude},${school.longitude}`;
 
         const contentString = `
-            <div class="p-2 font-sans" style="min-width: 280px; max-width: 320px;">
+            <div class="p-2 font-sans" style="max-width: 300px;">
               <h1 class="text-md font-bold text-gray-800">${school.name}</h1>
               <p class="text-sm text-gray-500">${school.administrativeDesignation} | District: ${school.district}</p>
               <hr class="my-2">
